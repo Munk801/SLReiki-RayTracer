@@ -1,0 +1,5 @@
+C:\Users\Munk\Documents\School Spring 2012\CS5600-Intro_to_Graphics\Ray Tracing\SLReiki\SLReiki\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Munk\Documents\School Spring 2012\CS5600-Intro_to_Graphics\Ray Tracing\SLReiki\SLReiki\bin\Debug\SLReiki.exe
+C:\Users\Munk\Documents\School Spring 2012\CS5600-Intro_to_Graphics\Ray Tracing\SLReiki\SLReiki\bin\Debug\SLReiki.pdb
+C:\Users\Munk\Documents\School Spring 2012\CS5600-Intro_to_Graphics\Ray Tracing\SLReiki\SLReiki\obj\x86\Debug\SLReiki.exe
+C:\Users\Munk\Documents\School Spring 2012\CS5600-Intro_to_Graphics\Ray Tracing\SLReiki\SLReiki\obj\x86\Debug\SLReiki.pdb
