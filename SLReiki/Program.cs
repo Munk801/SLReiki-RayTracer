@@ -37,7 +37,7 @@ namespace SLReiki
         const float TINY = 0.0001f;          
         static Color BG_COLOR = Color.Black;
 
-        const int MAX_DEPTH = 0; 
+        const int MAX_DEPTH = 5; 
         static SLVector3f dir = new SLVector3f();
 
         // PRIMITIVES
@@ -72,7 +72,7 @@ namespace SLReiki
             // add some objects
             float distance = 20.0f;
             float offset = distance / 2.0f;
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 5; i++)
             {
                 float x = (float)(random.NextDouble() * distance) - offset;
                 float y = (float)(random.NextDouble() * distance) - offset;
@@ -234,9 +234,13 @@ namespace SLReiki
                 lightDir.Normalize();
 
                 SLRay pointToLight = new SLRay(ray.ClosestPoint + (lightDir * TINY), lightDir);
-                pointToLight.ClosestPointDistance = lightDistance;           // IMPORTANT: We only want it to trace as far as the light!
+                pointToLight.ClosestPointDistance = lightDistance;
                 GetClosestIntersection(ref pointToLight);
-                if (pointToLight.ClosestPrimitive != null)                 // We hit something -- ignore this light entirely
+
+
+                
+
+                if (pointToLight.ClosestPrimitive != null)
                     continue;
 
                 // DIFFUSE LIGHTING
@@ -274,7 +278,7 @@ namespace SLReiki
                     }
                 }
 
-                //// Now do reflection, unless we're too deep
+
                 if (depth < MAX_DEPTH && MATERIAL_REFLECTION_COEFFICIENT > TINY)
                 {
                     // Set up the reflected ray - notice we move the origin out a tiny bit again
@@ -289,6 +293,7 @@ namespace SLReiki
                     g += MATERIAL_REFLECTION_COEFFICIENT * reflectionCol.G;
                     b += MATERIAL_REFLECTION_COEFFICIENT * reflectionCol.B;
                 }
+
             }
             // Clamp
             if (r > 255) r = 255;

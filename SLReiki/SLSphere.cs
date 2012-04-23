@@ -6,6 +6,9 @@ using System.Text;
 
 namespace SLReiki
 {
+    /// <summary>
+    /// Represents a sphere primitive.  derives from a ray primitive which provides abstract classes for intersection and finding a point normal
+    /// </summary>
     class SLSphere : SLRayPrimitive
     {
         SLVector3f position;

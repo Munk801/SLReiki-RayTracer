@@ -6,6 +6,9 @@ using System.Drawing;
 
 namespace SLReiki
 {
+    /// <summary>
+    /// Represents a plane object.  Derives from a primitvive which has a normal and intersect with ray.  
+    /// </summary>
     class SLPlane : SLRayPrimitive
     {
         public SLVector3f pNormal;

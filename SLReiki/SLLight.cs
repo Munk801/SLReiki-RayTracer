@@ -6,6 +6,9 @@ using System.Drawing;
 
 namespace SLReiki
 {
+    /// <summary>
+    /// Represents the light in a scene.  A light only has a position and color*intensity*.
+    /// </summary>
     public class SLLight
     {
         public SLVector3f position;
